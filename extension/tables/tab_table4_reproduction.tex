@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Sanity check: difference (reproduced $-$ published) of the mean per-corpus macro-F1 of Table~4 after refitting the 32 selected pipelines from the stored embeddings and hyper-parameters (tolerance $\pm0.005$; max $|\Delta|=0.0023$), and the minimum per-item agreement with the published test predictions.}
+\label{tab:table4-reproduction}
+\begin{tabular}{lrrrrr}
+\toprule
+Classifier & BERTimbau-base & BERTimbau-large & Albertina-100M & Albertina-900M & Min.\ agreement \\
+\midrule
+SVC-RBF & +0.0000 & +0.0000 & +0.0000 & +0.0001 & 0.9998 \\
+kNN & +0.0023 & +0.0021 & -0.0021 & -0.0021 & 0.9990 \\
+LinearSVC & +0.0000 & +0.0000 & +0.0000 & +0.0000 & 1.0000 \\
+LogReg & +0.0000 & +0.0000 & -0.0001 & +0.0000 & 0.9998 \\
+RandomForest & +0.0000 & +0.0000 & +0.0000 & +0.0000 & 1.0000 \\
+GradBoost & +0.0000 & +0.0000 & +0.0000 & +0.0000 & 1.0000 \\
+DecisionTree & -0.0000 & +0.0000 & +0.0000 & +0.0000 & 1.0000 \\
+GaussianNB & +0.0000 & +0.0000 & +0.0000 & +0.0000 & 1.0000 \\
+\bottomrule
+\end{tabular}
+\end{table}

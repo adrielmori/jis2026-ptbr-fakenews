@@ -1,0 +1,9 @@
+{
+  "best_pipeline": "albertina_ptbr_100m + knn",
+  "encoder": "albertina_ptbr_100m",
+  "classifier": "knn",
+  "mean_lodo_macro_f1": 0.5099054652891163,
+  "probability_source": "study1_full_lodo (predict_proba)",
+  "n_items": 41873,
+  "accuracy": 0.6148592171566403
+}

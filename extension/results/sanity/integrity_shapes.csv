@@ -1,0 +1,13 @@
+encoder,split,n_rows,dim,dtype,n_meta,finite_head
+bertimbau_base,train,29311,768,float32,29311,True
+bertimbau_base,val,6281,768,float32,6281,True
+bertimbau_base,test,6281,768,float32,6281,True
+bertimbau_large,train,29311,1024,float32,29311,True
+bertimbau_large,val,6281,1024,float32,6281,True
+bertimbau_large,test,6281,1024,float32,6281,True
+albertina_ptbr_100m,train,29311,768,float32,29311,True
+albertina_ptbr_100m,val,6281,768,float32,6281,True
+albertina_ptbr_100m,test,6281,768,float32,6281,True
+albertina_ptbr_900m,train,29311,1536,float32,29311,True
+albertina_ptbr_900m,val,6281,1536,float32,6281,True
+albertina_ptbr_900m,test,6281,1536,float32,6281,True

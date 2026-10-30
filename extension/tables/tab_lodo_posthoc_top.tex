@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Ten smallest raw $p$-values of the Wilcoxon comparisons of the best LODO pipeline (Albertina-100M + kNN) against the others (full LODO).}
+\label{tab:lodo-posthoc}
+\begin{tabular}{lrrrrl}
+\toprule
+Comparison pipeline & Mean F1 & Diff. & raw $p$ & Holm $p$ & Reject \\
+\midrule
+BERTimbau-base + kNN & 0.465 & +0.045 & 0.0098 & 0.3027 & no \\
+BERTimbau-base + LogReg & 0.440 & +0.070 & 0.0098 & 0.3027 & no \\
+BERTimbau-base + LinearSVC & 0.442 & +0.068 & 0.0137 & 0.3965 & no \\
+Albertina-900M + RandomForest & 0.431 & +0.079 & 0.0195 & 0.5469 & no \\
+Albertina-100M + RandomForest & 0.446 & +0.064 & 0.0273 & 0.7383 & no \\
+Albertina-900M + SVC-RBF & 0.444 & +0.066 & 0.0273 & 0.7383 & no \\
+Albertina-900M + GradBoost & 0.459 & +0.051 & 0.0371 & 0.9277 & no \\
+Albertina-900M + LinearSVC & 0.456 & +0.054 & 0.0371 & 0.9277 & no \\
+BERTimbau-base + SVC-RBF & 0.433 & +0.077 & 0.0371 & 0.9277 & no \\
+BERTimbau-large + RandomForest & 0.453 & +0.057 & 0.0371 & 0.9277 & no \\
+\bottomrule
+\end{tabular}
+\end{table}

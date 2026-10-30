@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Encoder ranking in-distribution (published, mean over classifiers and corpora) versus LODO. $\Delta$ = LODO $-$ in-distribution macro-F1.}
+\label{tab:lodo-vs-indist-encoders}
+\begin{tabular}{lrrrrr}
+\toprule
+Encoder & In-dist. F1 & Rank & LODO F1 & Rank & $\Delta$ \\
+\midrule
+Albertina-900M & 0.685 & 1 & 0.444 & 4 & -0.241 \\
+BERTimbau-large & 0.678 & 2 & 0.450 & 2 & -0.229 \\
+BERTimbau-base & 0.665 & 3 & 0.445 & 3 & -0.219 \\
+Albertina-100M & 0.662 & 4 & 0.454 & 1 & -0.208 \\
+\bottomrule
+\end{tabular}
+\par\vspace{2pt}\footnotesize Spearman $\rho$ between in-distribution and LODO rankings: encoders $\rho=-0.80$; 32 pipelines $\rho=0.14$ ($p=0.46$); 10 corpora $\rho=0.41$ ($p=0.24$).
+\end{table}

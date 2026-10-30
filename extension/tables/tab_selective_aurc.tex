@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Area under the risk--coverage curve (AURC, lower is better) and its excess over the optimal curve (E-AURC) per condition, all corpora pooled; Risk@100\% is the error rate at full coverage.}
+\label{tab:selective-aurc}
+\begin{tabular}{llrrrrrrr}
+\toprule
+Scenario & Pipeline & AURC raw & E-AURC & AURC sig. & E-AURC & AURC iso. & E-AURC & Risk@100\% \\
+\midrule
+in-dist. & Albertina-900M + SVC-RBF & 0.011 & 0.008 & 0.011 & 0.008 & 0.012 & 0.009 & 0.066 \\
+in-dist. & Albertina-900M + LogReg & 0.033 & 0.027 & 0.034 & 0.027 & 0.033 & 0.027 & 0.109 \\
+in-dist. & BERTimbau-large + SVC-RBF & 0.010 & 0.008 & 0.011 & 0.008 & 0.012 & 0.010 & 0.066 \\
+in-dist. & BERTimbau-large + LogReg & 0.039 & 0.031 & 0.039 & 0.031 & 0.039 & 0.031 & 0.122 \\
+LODO & Albertina-900M + SVC-RBF & 0.379 & 0.271 & 0.395 & 0.286 & 0.386 & 0.278 & 0.427 \\
+LODO & Albertina-900M + LogReg & 0.499 & 0.385 & 0.503 & 0.390 & 0.496 & 0.385 & 0.437 \\
+LODO & BERTimbau-large + SVC-RBF & 0.358 & 0.254 & 0.373 & 0.268 & 0.371 & 0.269 & 0.421 \\
+LODO & BERTimbau-large + LogReg & 0.442 & 0.320 & 0.445 & 0.322 & 0.446 & 0.330 & 0.452 \\
+\bottomrule
+\end{tabular}
+\end{table*}

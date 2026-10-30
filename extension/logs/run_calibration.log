@@ -1,0 +1,96 @@
+2026-10-30 13:12:15,734 | INFO | GPU Gram-matrix SVC: True
+2026-10-30 13:12:15,735 | INFO | [START] scenario (a) in-distribution: 4 fits (gpu=True)
+2026-10-30 13:13:10,498 | INFO | [DONE ] scenario (a) in-distribution: 4 fits (gpu=True) | 54.8 s (0.91 min)
+2026-10-30 13:13:10,499 | INFO | [START] scenario (b) LODO: 40 fits (n_jobs=10, gpu=True)
+2026-10-30 13:23:12,223 | INFO | [DONE ] scenario (b) LODO: 40 fits (n_jobs=10, gpu=True) | 601.7 s (10.03 min)
+2026-10-30 13:23:12,989 | INFO | fit seconds:
+pipeline                       scenario
+albertina_ptbr_900m + logreg   indist      19.9
+                               lodo        40.9
+albertina_ptbr_900m + svc_rbf  indist      30.7
+                               lodo        33.0
+bertimbau_large + logreg       indist       9.8
+                               lodo        19.7
+bertimbau_large + svc_rbf      indist      23.3
+                               lodo        22.5
+2026-10-30 13:23:12,990 | INFO | [START] calibration metrics + reliability bins
+2026-10-30 13:23:14,913 | INFO | Aggregate calibration metrics:
+                     pipeline scenario condition    ece  ece_adaptive    mce  brier  log_loss  accuracy  macro_f1
+ albertina_ptbr_900m + logreg   indist  isotonic 0.0103        0.0143 0.2501 0.0819    0.2931    0.8905    0.8790
+ albertina_ptbr_900m + logreg   indist       raw 0.0174        0.0197 0.0609 0.0822    0.2790    0.8914    0.8793
+ albertina_ptbr_900m + logreg   indist   sigmoid 0.0139        0.0143 0.0675 0.0819    0.2784    0.8916    0.8797
+ albertina_ptbr_900m + logreg     lodo  isotonic 0.2665        0.2709 0.5731 0.3422    1.4786    0.5681    0.4840
+ albertina_ptbr_900m + logreg     lodo       raw 0.2420        0.2420 0.5928 0.3347    1.2007    0.5626    0.4784
+ albertina_ptbr_900m + logreg     lodo   sigmoid 0.2502        0.2502 0.5833 0.3387    1.2586    0.5637    0.4775
+albertina_ptbr_900m + svc_rbf   indist  isotonic 0.0116        0.0091 0.5876 0.0495    0.1977    0.9342    0.9283
+albertina_ptbr_900m + svc_rbf   indist       raw 0.1789        0.1789 0.2548 0.0850    0.3187    0.9339    0.9271
+albertina_ptbr_900m + svc_rbf   indist   sigmoid 0.0097        0.0080 0.1040 0.0493    0.1698    0.9341    0.9276
+albertina_ptbr_900m + svc_rbf     lodo  isotonic 0.2723        0.2665 0.4858 0.3252    1.2604    0.5739    0.4958
+albertina_ptbr_900m + svc_rbf     lodo       raw 0.0622        0.0628 0.1518 0.2474    0.6898    0.5733    0.4961
+albertina_ptbr_900m + svc_rbf     lodo   sigmoid 0.2554        0.2554 0.3683 0.3189    1.0524    0.5721    0.4974
+     bertimbau_large + logreg   indist  isotonic 0.0105        0.0109 0.4533 0.0912    0.3101    0.8758    0.8610
+     bertimbau_large + logreg   indist       raw 0.0148        0.0147 0.0518 0.0909    0.3010    0.8776    0.8641
+     bertimbau_large + logreg   indist   sigmoid 0.0096        0.0085 0.0456 0.0907    0.3008    0.8777    0.8646
+     bertimbau_large + logreg     lodo  isotonic 0.2760        0.2750 0.4642 0.3320    1.1175    0.5591    0.5233
+     bertimbau_large + logreg     lodo       raw 0.2329        0.2329 0.4273 0.3188    1.0044    0.5483    0.5142
+     bertimbau_large + logreg     lodo   sigmoid 0.2430        0.2430 0.4262 0.3238    1.0404    0.5460    0.5104
+    bertimbau_large + svc_rbf   indist  isotonic 0.0159        0.0115 0.1289 0.0487    0.1877    0.9346    0.9283
+    bertimbau_large + svc_rbf   indist       raw 0.1834        0.1834 0.2758 0.0859    0.3227    0.9344    0.9279
+    bertimbau_large + svc_rbf   indist   sigmoid 0.0095        0.0082 0.0917 0.0484    0.1684    0.9346    0.9283
+    bertimbau_large + svc_rbf     lodo  isotonic 0.2254        0.2455 0.4218 0.2988    1.0723    0.5827    0.5157
+    bertimbau_large + svc_rbf     lodo       raw 0.0402        0.0424 0.1656 0.2423    0.6775    0.5792    0.5155
+    bertimbau_large + svc_rbf     lodo   sigmoid 0.2050        0.2050 0.3477 0.2971    0.9344    0.5780    0.5210
+2026-10-30 13:23:14,913 | INFO | [DONE ] calibration metrics + reliability bins | 1.9 s (0.03 min)
+2026-10-30 13:23:14,914 | INFO | [START] selective classification curves, AURC and triage thresholds (bootstrap)
+2026-10-30 13:25:08,644 | INFO | Triage (aggregate):
+                     pipeline scenario condition  target_macro_f1      status  threshold  coverage  coverage_ci_low  coverage_ci_high
+ albertina_ptbr_900m + logreg   indist  isotonic             0.90     reached       0.61     0.943            0.855             0.960
+ albertina_ptbr_900m + logreg   indist  isotonic             0.95     reached       0.88     0.664            0.653             0.751
+ albertina_ptbr_900m + logreg   indist       raw             0.90     reached       0.59     0.942            0.908             0.966
+ albertina_ptbr_900m + logreg   indist       raw             0.95     reached       0.83     0.718            0.633             0.760
+ albertina_ptbr_900m + logreg   indist   sigmoid             0.90     reached       0.60     0.940            0.906             0.965
+ albertina_ptbr_900m + logreg   indist   sigmoid             0.95     reached       0.85     0.713            0.637             0.765
+ albertina_ptbr_900m + logreg     lodo  isotonic             0.90 not_reached        NaN     0.000            0.000             0.000
+ albertina_ptbr_900m + logreg     lodo  isotonic             0.95 not_reached        NaN     0.000            0.000             0.000
+ albertina_ptbr_900m + logreg     lodo       raw             0.90 not_reached        NaN     0.000            0.000             0.000
+ albertina_ptbr_900m + logreg     lodo       raw             0.95 not_reached        NaN     0.000            0.000             0.000
+ albertina_ptbr_900m + logreg     lodo   sigmoid             0.90 not_reached        NaN     0.000            0.000             0.000
+ albertina_ptbr_900m + logreg     lodo   sigmoid             0.95 not_reached        NaN     0.000            0.000             0.000
+albertina_ptbr_900m + svc_rbf   indist  isotonic             0.90     reached       0.50     1.000            1.000             1.000
+albertina_ptbr_900m + svc_rbf   indist  isotonic             0.95     reached       0.65     0.948            0.917             0.953
+albertina_ptbr_900m + svc_rbf   indist       raw             0.90     reached       0.50     1.000            1.000             1.000
+albertina_ptbr_900m + svc_rbf   indist       raw             0.95     reached       0.55     0.936            0.918             0.962
+albertina_ptbr_900m + svc_rbf   indist   sigmoid             0.90     reached       0.50     1.000            1.000             1.000
+albertina_ptbr_900m + svc_rbf   indist   sigmoid             0.95     reached       0.65     0.945            0.921             0.962
+albertina_ptbr_900m + svc_rbf     lodo  isotonic             0.90 not_reached        NaN     0.000            0.000             0.000
+albertina_ptbr_900m + svc_rbf     lodo  isotonic             0.95 not_reached        NaN     0.000            0.000             0.000
+albertina_ptbr_900m + svc_rbf     lodo       raw             0.90 not_reached        NaN     0.000            0.000             0.000
+albertina_ptbr_900m + svc_rbf     lodo       raw             0.95 not_reached        NaN     0.000            0.000             0.000
+albertina_ptbr_900m + svc_rbf     lodo   sigmoid             0.90 not_reached        NaN     0.000            0.000             0.000
+albertina_ptbr_900m + svc_rbf     lodo   sigmoid             0.95 not_reached        NaN     0.000            0.000             0.000
+     bertimbau_large + logreg   indist  isotonic             0.90     reached       0.68     0.853            0.825             0.905
+     bertimbau_large + logreg   indist  isotonic             0.95     reached       0.90     0.598            0.583             0.683
+     bertimbau_large + logreg   indist       raw             0.90     reached       0.65     0.877            0.846             0.918
+     bertimbau_large + logreg   indist       raw             0.95     reached       0.87     0.626            0.580             0.683
+     bertimbau_large + logreg   indist   sigmoid             0.90     reached       0.65     0.887            0.852             0.921
+     bertimbau_large + logreg   indist   sigmoid             0.95     reached       0.88     0.636            0.573             0.685
+     bertimbau_large + logreg     lodo  isotonic             0.90 not_reached        NaN     0.000            0.000             0.000
+     bertimbau_large + logreg     lodo  isotonic             0.95 not_reached        NaN     0.000            0.000             0.000
+     bertimbau_large + logreg     lodo       raw             0.90 not_reached        NaN     0.000            0.000             0.000
+     bertimbau_large + logreg     lodo       raw             0.95 not_reached        NaN     0.000            0.000             0.000
+     bertimbau_large + logreg     lodo   sigmoid             0.90 not_reached        NaN     0.000            0.000             0.000
+     bertimbau_large + logreg     lodo   sigmoid             0.95 not_reached        NaN     0.000            0.000             0.000
+    bertimbau_large + svc_rbf   indist  isotonic             0.90     reached       0.50     1.000            1.000             1.000
+    bertimbau_large + svc_rbf   indist  isotonic             0.95     reached       0.66     0.947            0.928             0.956
+    bertimbau_large + svc_rbf   indist       raw             0.90     reached       0.50     1.000            1.000             1.000
+    bertimbau_large + svc_rbf   indist       raw             0.95     reached       0.54     0.951            0.924             0.961
+    bertimbau_large + svc_rbf   indist   sigmoid             0.90     reached       0.50     1.000            1.000             1.000
+    bertimbau_large + svc_rbf   indist   sigmoid             0.95     reached       0.67     0.943            0.932             0.962
+    bertimbau_large + svc_rbf     lodo  isotonic             0.90 not_reached        NaN     0.000            0.000             0.000
+    bertimbau_large + svc_rbf     lodo  isotonic             0.95 not_reached        NaN     0.000            0.000             0.000
+    bertimbau_large + svc_rbf     lodo       raw             0.90 not_reached        NaN     0.000            0.000             0.001
+    bertimbau_large + svc_rbf     lodo       raw             0.95 not_reached        NaN     0.000            0.000             0.001
+    bertimbau_large + svc_rbf     lodo   sigmoid             0.90 not_reached        NaN     0.000            0.000             0.000
+    bertimbau_large + svc_rbf     lodo   sigmoid             0.95 not_reached        NaN     0.000            0.000             0.000
+2026-10-30 13:25:08,645 | INFO | [DONE ] selective classification curves, AURC and triage thresholds (bootstrap) | 113.7 s (1.90 min)
+2026-10-30 13:25:08,646 | INFO | Study 2 finished.

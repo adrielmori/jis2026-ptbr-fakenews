@@ -1,0 +1,28 @@
+2026-10-30 13:26:22,626 | INFO | [START] Study 1 figures
+2026-10-30 13:26:23,406 | INFO | saved fig_lodo_heatmap.{pdf,png}
+2026-10-30 13:26:23,680 | INFO | saved fig_indist_vs_lodo_by_corpus.{pdf,png}
+2026-10-30 13:26:23,964 | INFO | saved fig_lodo_boxplot_by_encoder.{pdf,png}
+2026-10-30 13:26:24,208 | INFO | saved fig_lodo_balanced_vs_full.{pdf,png}
+2026-10-30 13:26:24,930 | INFO | saved fig_lodo_delta_heatmap.{pdf,png}
+2026-10-30 13:26:24,930 | INFO | [DONE ] Study 1 figures | 2.3 s (0.04 min)
+2026-10-30 13:26:24,931 | INFO | [START] Study 2 figures
+2026-10-30 13:26:25,803 | INFO | saved fig_reliability_indist.{pdf,png}
+2026-10-30 13:26:26,899 | INFO | saved fig_risk_coverage_indist.{pdf,png}
+2026-10-30 13:26:27,806 | INFO | saved fig_coverage_f1_indist_albertina_ptbr_900m__svc_rbf.{pdf,png}
+2026-10-30 13:26:28,684 | INFO | saved fig_coverage_f1_indist_albertina_ptbr_900m__logreg.{pdf,png}
+2026-10-30 13:26:29,589 | INFO | saved fig_coverage_f1_indist_bertimbau_large__svc_rbf.{pdf,png}
+2026-10-30 13:26:30,589 | INFO | saved fig_coverage_f1_indist_bertimbau_large__logreg.{pdf,png}
+2026-10-30 13:26:31,294 | INFO | saved fig_reliability_lodo.{pdf,png}
+2026-10-30 13:26:32,537 | INFO | saved fig_risk_coverage_lodo.{pdf,png}
+2026-10-30 13:26:33,471 | INFO | saved fig_coverage_f1_lodo_albertina_ptbr_900m__svc_rbf.{pdf,png}
+2026-10-30 13:26:34,642 | INFO | saved fig_coverage_f1_lodo_albertina_ptbr_900m__logreg.{pdf,png}
+2026-10-30 13:26:35,556 | INFO | saved fig_coverage_f1_lodo_bertimbau_large__svc_rbf.{pdf,png}
+2026-10-30 13:26:36,542 | INFO | saved fig_coverage_f1_lodo_bertimbau_large__logreg.{pdf,png}
+2026-10-30 13:26:37,191 | INFO | saved fig_triage_coverage_90.{pdf,png}
+2026-10-30 13:26:38,074 | INFO | saved fig_triage_coverage_95.{pdf,png}
+2026-10-30 13:26:38,074 | INFO | [DONE ] Study 2 figures | 13.1 s (0.22 min)
+2026-10-30 13:26:38,076 | INFO | [START] error-analysis figures
+2026-10-30 13:26:39,163 | INFO | saved fig_umap_best_encoder.{pdf,png}
+2026-10-30 13:26:39,987 | INFO | saved fig_umap_small_multiples.{pdf,png}
+2026-10-30 13:26:40,014 | INFO | [DONE ] error-analysis figures | 1.9 s (0.03 min)
+2026-10-30 13:26:40,016 | INFO | Figures written to <repo>\extension\figures

@@ -1,0 +1,113 @@
+2026-10-29 22:31:55,709 | INFO | GPU Gram-matrix SVC: True
+2026-10-29 22:31:55,709 | INFO | [START] refit 32 pipelines on train+val (n_jobs=10, gpu=True)
+[Parallel(n_jobs=10)]: Using backend LokyBackend with 10 concurrent workers.
+[Parallel(n_jobs=10)]: Done  15 out of  28 | elapsed:  1.4min remaining:  1.2min
+[Parallel(n_jobs=10)]: Done  21 out of  28 | elapsed:  8.6min remaining:  2.9min
+[Parallel(n_jobs=10)]: Done  28 out of  28 | elapsed: 97.3min finished
+2026-10-30 00:09:15,710 | INFO | [DONE ] refit 32 pipelines on train+val (n_jobs=10, gpu=True) | 5840.0 s (97.33 min)
+2026-10-30 00:09:16,194 | INFO | fit time per pipeline (s):
+encoder              classifier       
+albertina_ptbr_100m  decision_tree          50.8
+                     gaussian_nb             0.9
+                     gradient_boosting    2645.9
+                     knn                    25.8
+                     linearsvc              13.5
+                     logreg                 16.1
+                     random_forest         488.9
+                     svc_rbf                52.8
+albertina_ptbr_900m  decision_tree          96.9
+                     gaussian_nb             2.3
+                     gradient_boosting    5754.3
+                     knn                    60.5
+                     linearsvc              35.1
+                     logreg                 31.3
+                     random_forest         670.1
+                     svc_rbf                49.2
+bertimbau_base       decision_tree          47.5
+                     gaussian_nb             0.9
+                     gradient_boosting    2643.6
+                     knn                    24.9
+                     linearsvc              14.4
+                     logreg                 17.2
+                     random_forest         516.6
+                     svc_rbf                51.0
+bertimbau_large      decision_tree          65.9
+                     gaussian_nb             1.1
+                     gradient_boosting    3682.7
+                     knn                    34.5
+                     linearsvc              15.3
+                     logreg                 16.9
+                     random_forest         600.7
+                     svc_rbf                53.4
+2026-10-30 00:09:16,195 | INFO | [START] compare with published Table 4
+2026-10-30 00:09:17,145 | INFO | 
+       classifier             encoder  published  reproduced          diff  within_tolerance
+    decision_tree albertina_ptbr_100m   0.617338    0.617338  0.000000e+00              True
+    decision_tree albertina_ptbr_900m   0.631501    0.631501  1.110223e-16              True
+    decision_tree      bertimbau_base   0.606574    0.606574 -1.110223e-16              True
+    decision_tree     bertimbau_large   0.590205    0.590205  0.000000e+00              True
+      gaussian_nb albertina_ptbr_100m   0.392247    0.392247  0.000000e+00              True
+      gaussian_nb albertina_ptbr_900m   0.386733    0.386733  0.000000e+00              True
+      gaussian_nb      bertimbau_base   0.402529    0.402529  5.551115e-17              True
+      gaussian_nb     bertimbau_large   0.393855    0.393855  5.551115e-17              True
+gradient_boosting albertina_ptbr_100m   0.695231    0.695231  0.000000e+00              True
+gradient_boosting albertina_ptbr_900m   0.706705    0.706705  0.000000e+00              True
+gradient_boosting      bertimbau_base   0.668410    0.668410  0.000000e+00              True
+gradient_boosting     bertimbau_large   0.691463    0.691463  0.000000e+00              True
+              knn albertina_ptbr_100m   0.715528    0.713388 -2.140024e-03              True
+              knn albertina_ptbr_900m   0.738883    0.736743 -2.140024e-03              True
+              knn      bertimbau_base   0.734604    0.736891  2.287549e-03              True
+              knn     bertimbau_large   0.743864    0.745936  2.071904e-03              True
+        linearsvc albertina_ptbr_100m   0.684309    0.684309  0.000000e+00              True
+        linearsvc albertina_ptbr_900m   0.747864    0.747864  0.000000e+00              True
+        linearsvc      bertimbau_base   0.695433    0.695433  0.000000e+00              True
+        linearsvc     bertimbau_large   0.733898    0.733898  0.000000e+00              True
+           logreg albertina_ptbr_100m   0.689042    0.688946 -9.622139e-05              True
+           logreg albertina_ptbr_900m   0.738085    0.738085  0.000000e+00              True
+           logreg      bertimbau_base   0.694125    0.694125  0.000000e+00              True
+           logreg     bertimbau_large   0.731273    0.731273  0.000000e+00              True
+    random_forest albertina_ptbr_100m   0.706957    0.706957  0.000000e+00              True
+    random_forest albertina_ptbr_900m   0.711405    0.711405  0.000000e+00              True
+    random_forest      bertimbau_base   0.710963    0.710963  1.110223e-16              True
+    random_forest     bertimbau_large   0.715774    0.715774  0.000000e+00              True
+          svc_rbf albertina_ptbr_100m   0.791413    0.791413  0.000000e+00              True
+          svc_rbf albertina_ptbr_900m   0.821896    0.821952  5.617012e-05              True
+          svc_rbf      bertimbau_base   0.806474    0.806474  1.110223e-16              True
+          svc_rbf     bertimbau_large   0.824253    0.824253  0.000000e+00              True
+2026-10-30 00:09:17,145 | INFO | max |diff| = 0.00229 ; pairs outside tolerance (0.005): 0
+2026-10-30 00:09:17,987 | INFO | 
+            encoder        classifier  prediction_agreement  repro_test_f1_macro  test_f1_macro       diff_f1
+albertina_ptbr_100m     decision_tree              1.000000             0.720326       0.720326  0.000000e+00
+albertina_ptbr_100m       gaussian_nb              1.000000             0.590293       0.590293  0.000000e+00
+albertina_ptbr_100m gradient_boosting              1.000000             0.829479       0.829479  0.000000e+00
+albertina_ptbr_100m               knn              0.999045             0.853329       0.853797 -4.680777e-04
+albertina_ptbr_100m         linearsvc              1.000000             0.837386       0.837386  0.000000e+00
+albertina_ptbr_100m            logreg              0.999841             0.838848       0.839045 -1.967175e-04
+albertina_ptbr_100m     random_forest              1.000000             0.828029       0.828029  0.000000e+00
+albertina_ptbr_100m           svc_rbf              1.000000             0.917360       0.917360  0.000000e+00
+albertina_ptbr_900m     decision_tree              1.000000             0.758519       0.758519  0.000000e+00
+albertina_ptbr_900m       gaussian_nb              1.000000             0.588283       0.588283  0.000000e+00
+albertina_ptbr_900m gradient_boosting              1.000000             0.857860       0.857860  0.000000e+00
+albertina_ptbr_900m               knn              0.999045             0.870791       0.871246 -4.553232e-04
+albertina_ptbr_900m         linearsvc              1.000000             0.882729       0.882729  0.000000e+00
+albertina_ptbr_900m            logreg              1.000000             0.880378       0.880378  0.000000e+00
+albertina_ptbr_900m     random_forest              1.000000             0.852328       0.852328  0.000000e+00
+albertina_ptbr_900m           svc_rbf              0.999841             0.931406       0.931238  1.680982e-04
+     bertimbau_base     decision_tree              1.000000             0.736797       0.736797  0.000000e+00
+     bertimbau_base       gaussian_nb              1.000000             0.599691       0.599691  0.000000e+00
+     bertimbau_base gradient_boosting              1.000000             0.847309       0.847309  0.000000e+00
+     bertimbau_base               knn              0.999045             0.860180       0.859712  4.673007e-04
+     bertimbau_base         linearsvc              1.000000             0.849106       0.849106  0.000000e+00
+     bertimbau_base            logreg              1.000000             0.848618       0.848618  0.000000e+00
+     bertimbau_base     random_forest              1.000000             0.846182       0.846182  0.000000e+00
+     bertimbau_base           svc_rbf              1.000000             0.928476       0.928476 -1.110223e-16
+    bertimbau_large     decision_tree              1.000000             0.734005       0.734005  0.000000e+00
+    bertimbau_large       gaussian_nb              1.000000             0.595562       0.595562  0.000000e+00
+    bertimbau_large gradient_boosting              1.000000             0.853833       0.853833  0.000000e+00
+    bertimbau_large               knn              0.999045             0.857865       0.857389  4.765209e-04
+    bertimbau_large         linearsvc              1.000000             0.866270       0.866270  0.000000e+00
+    bertimbau_large            logreg              1.000000             0.862756       0.862756  0.000000e+00
+    bertimbau_large     random_forest              1.000000             0.851741       0.851741  0.000000e+00
+    bertimbau_large           svc_rbf              1.000000             0.930501       0.930501  0.000000e+00
+2026-10-30 00:09:17,988 | INFO | [DONE ] compare with published Table 4 | 1.8 s (0.03 min)
+2026-10-30 00:09:18,007 | INFO | Table 4 reproduction: PASS

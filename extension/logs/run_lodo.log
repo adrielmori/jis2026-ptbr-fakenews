@@ -1,0 +1,86 @@
+2026-10-30 00:09:25,739 | INFO | GPU Gram-matrix SVC: True (40 fits on GPU, 280 on CPU)
+2026-10-30 00:09:26,563 | INFO | [START] full LODO: 320 fits (n_jobs=10, gpu=True)
+2026-10-30 11:15:42,829 | INFO | [DONE ] full LODO: 320 fits (n_jobs=10, gpu=True) | 39976.3 s (666.27 min)
+2026-10-30 11:15:45,305 | INFO | fit seconds by classifier (mean):
+classifier
+decision_tree          63.2
+gaussian_nb             1.0
+gradient_boosting    8437.8
+knn                    25.7
+linearsvc              26.7
+logreg                 29.3
+random_forest        1265.7
+svc_rbf               147.6
+2026-10-30 11:15:45,305 | INFO | [START] full LODO tables
+2026-10-30 11:15:45,347 | INFO | LODO Table-4 layout (mean macro-F1 over 10 holdouts):
+encoder            albertina_ptbr_100m  albertina_ptbr_900m  bertimbau_base  bertimbau_large
+classifier                                                                                  
+decision_tree                    0.461                0.467           0.469            0.465
+gaussian_nb                      0.355                0.352           0.374            0.347
+gradient_boosting                0.464                0.459           0.480            0.462
+knn                              0.510                0.489           0.465            0.489
+linearsvc                        0.468                0.456           0.442            0.469
+logreg                           0.466                0.454           0.440            0.462
+random_forest                    0.446                0.431           0.461            0.453
+svc_rbf                          0.459                0.444           0.433            0.449
+2026-10-30 11:15:45,349 | INFO | LODO Table-5 layout:
+held_out_dataset  n_test  n_pipelines  mean_macro_f1  std_macro_f1  median_macro_f1  best_macro_f1  worst_macro_f1  range_macro_f1                           best_pipeline  best_accuracy  mean_accuracy
+    CENTRALFATOS   10316           32          0.451         0.028            0.449          0.502           0.395           0.107            bertimbau_base + gaussian_nb          0.970          0.809
+       COVID19BR    2399           32          0.404         0.041            0.402          0.506           0.330           0.175           bertimbau_large + gaussian_nb          0.517          0.439
+        FACTCKBR    2106           32          0.544         0.069            0.549          0.674           0.383           0.291            albertina_ptbr_900m + logreg          0.874          0.795
+          FAKEBR    7200           32          0.523         0.077            0.547          0.593           0.335           0.258           albertina_ptbr_100m + svc_rbf          0.598          0.571
+      FAKETRUEBR    3582           32          0.314         0.057            0.317          0.426           0.184           0.242            albertina_ptbr_100m + logreg          0.444          0.354
+             FCN    2064           32          0.725         0.157            0.763          0.894           0.334           0.560 albertina_ptbr_900m + gradient_boosting          0.895          0.752
+        FNEWSSET     600           32          0.253         0.117            0.230          0.511           0.079           0.432            bertimbau_base + gaussian_nb          0.522          0.273
+        FRECOGNA   11902           32          0.370         0.040            0.363          0.455           0.295           0.160          bertimbau_base + decision_tree          0.464          0.455
+         MUMINPT    1404           32          0.354         0.083            0.350          0.553           0.156           0.397               albertina_ptbr_900m + knn          0.892          0.474
+          TRE300     300           32          0.544         0.137            0.584          0.704           0.171           0.533               albertina_ptbr_100m + knn          0.710          0.561
+2026-10-30 11:15:45,429 | INFO | Spearman correlations:
+                         level  n  spearman_rho  p_value
+32_pipelines_mean_over_corpora 32        0.1356   0.4592
+               4_encoders_mean  4       -0.8000   0.2000
+10_corpora_mean_over_pipelines 10        0.4061   0.2443
+ pipelines_within_CENTRALFATOS 32        0.3639   0.0406
+    pipelines_within_COVID19BR 32       -0.4424   0.0112
+     pipelines_within_FACTCKBR 32        0.5372   0.0015
+       pipelines_within_FAKEBR 32        0.6338   0.0001
+   pipelines_within_FAKETRUEBR 32        0.0795   0.6652
+          pipelines_within_FCN 32        0.8089   0.0000
+     pipelines_within_FNEWSSET 32       -0.3831   0.0304
+     pipelines_within_FRECOGNA 32       -0.1840   0.3134
+      pipelines_within_MUMINPT 32        0.3062   0.0883
+       pipelines_within_TRE300 32        0.8512   0.0000
+2026-10-30 11:15:45,431 | INFO | Encoder means (in-dist vs LODO):
+            encoder  indist_macro_f1  lodo_macro_f1  delta_lodo_minus_indist  rank_indist  rank_lodo        scope
+albertina_ptbr_100m           0.6615         0.4536                  -0.2079          4.0        1.0 encoder_mean
+albertina_ptbr_900m           0.6854         0.4439                  -0.2415          1.0        4.0 encoder_mean
+     bertimbau_base           0.6649         0.4454                  -0.2194          3.0        3.0 encoder_mean
+    bertimbau_large           0.6781         0.4496                  -0.2285          2.0        2.0 encoder_mean
+2026-10-30 11:15:45,431 | INFO | [DONE ] full LODO tables | 0.1 s (0.00 min)
+2026-10-30 11:15:45,792 | INFO | [START] balanced LODO: 200 tasks x 8 classifiers (n_jobs=10)
+2026-10-30 13:11:55,602 | INFO | [DONE ] balanced LODO: 200 tasks x 8 classifiers (n_jobs=10) | 6969.8 s (116.16 min)
+2026-10-30 13:12:06,959 | INFO | [START] balanced LODO summary
+2026-10-30 13:12:07,011 | INFO | Balanced LODO by corpus:
+held_out_dataset  balanced_mean_macro_f1  full_mean_macro_f1  balanced_best_macro_f1  full_best_macro_f1  n_train_balanced  n_train_full  delta_balanced_minus_full_mean  delta_balanced_minus_full_best  indist_mean_macro_f1
+    CENTRALFATOS                   0.396               0.451                   0.481               0.502              2700         31557                          -0.055                          -0.021                 0.508
+       COVID19BR                   0.403               0.404                   0.465               0.506              2700         39474                          -0.002                          -0.040                 0.636
+        FACTCKBR                   0.585               0.544                   0.663               0.674              2700         39767                           0.041                          -0.011                 0.718
+          FAKEBR                   0.602               0.523                   0.671               0.593              2700         34673                           0.079                           0.078                 0.746
+      FAKETRUEBR                   0.388               0.314                   0.490               0.426              2700         38291                           0.074                           0.064                 0.782
+             FCN                   0.770               0.725                   0.891               0.894              2700         39809                           0.045                          -0.003                 0.853
+        FNEWSSET                   0.229               0.253                   0.400               0.511              2700         41273                          -0.024                          -0.112                 0.486
+        FRECOGNA                   0.360               0.370                   0.469               0.455              2700         29971                          -0.010                           0.014                 0.794
+         MUMINPT                   0.366               0.354                   0.509               0.553              2700         40469                           0.012                          -0.045                 0.518
+          TRE300                   0.505               0.544                   0.703               0.704              5400         41573                          -0.040                          -0.001                 0.683
+2026-10-30 13:12:07,011 | INFO | [DONE ] balanced LODO summary | 0.1 s (0.00 min)
+2026-10-30 13:12:07,012 | INFO | [START] Friedman / Wilcoxon / Holm
+2026-10-30 13:12:07,108 | INFO | 
+ scenario  n_models  n_units  alpha  statistic  p_value  kendall_w  significant
+lodo_full        32       10   0.05  31.686364 0.432044   0.102214        False
+2026-10-30 13:12:07,108 | INFO | best: albertina_ptbr_100m + knn ; rejected after Holm: 0 / 31
+2026-10-30 13:12:07,109 | INFO | 
+     scenario  n_models  n_units  alpha  statistic  p_value  kendall_w  significant
+lodo_balanced        32       10   0.05  59.518182 0.001538   0.191994         True
+2026-10-30 13:12:07,109 | INFO | best: albertina_ptbr_100m + knn ; rejected after Holm: 0 / 31
+2026-10-30 13:12:07,110 | INFO | [DONE ] Friedman / Wilcoxon / Holm | 0.1 s (0.00 min)
+2026-10-30 13:12:07,110 | INFO | Study 1 finished.

@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Friedman test over the 32 pipelines with the ten held-out corpora as statistical units, followed by two-sided Wilcoxon signed-rank tests of the best pipeline against each of the other 31 with Holm--Bonferroni correction ($\alpha=0.05$); ``Holm rej.'' is the number of comparisons remaining significant (layout of Table~6 of the original paper).}
+\label{tab:lodo-stats}
+\begin{tabular}{lrrrrrlrr}
+\toprule
+Scenario & Models & Hold-outs & $\chi^2_F$ & $p$ & Kendall $W$ & Best pipeline & Mean F1 & Holm rej. \\
+\midrule
+LODO full & 32 & 10 & 31.69 & 4.32e-01 & 0.102 & Albertina-100M + kNN & 0.510 & 0/31 \\
+LODO balanced & 32 & 10 & 59.52 & 1.54e-03 & 0.192 & Albertina-100M + kNN & 0.517 & 0/31 \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Leave-one-dataset-out macro-F1 averaged over the ten held-out corpora, for every encoder $\times$ classifier pipeline (same layout as the in-distribution Table~4 of the original paper). Bold marks the best encoder per classifier. The last row repeats the published in-distribution column means for reference.}
+\label{tab:lodo-by-pipeline}
+\begin{tabular}{lrrrrr}
+\toprule
+Classifier & BERTimbau-base & BERTimbau-large & Albertina-100M & Albertina-900M & Mean \\
+\midrule
+SVC-RBF & 0.433 & 0.449 & \textbf{0.459} & 0.444 & 0.446 \\
+kNN & 0.465 & 0.489 & \textbf{0.510} & 0.489 & 0.488 \\
+LinearSVC & 0.442 & \textbf{0.469} & 0.468 & 0.456 & 0.459 \\
+LogReg & 0.440 & 0.462 & \textbf{0.466} & 0.454 & 0.456 \\
+RandomForest & \textbf{0.461} & 0.453 & 0.446 & 0.431 & 0.448 \\
+GradBoost & \textbf{0.480} & 0.462 & 0.464 & 0.459 & 0.466 \\
+DecisionTree & \textbf{0.469} & 0.465 & 0.461 & 0.467 & 0.466 \\
+GaussianNB & \textbf{0.374} & 0.347 & 0.355 & 0.352 & 0.357 \\
+\midrule Mean & 0.445 & 0.450 & 0.454 & 0.444 & 0.448 \\
+In-distribution mean (published) & 0.665 & 0.678 & 0.662 & 0.685 & 0.672 \\
+\bottomrule
+\end{tabular}
+\end{table}

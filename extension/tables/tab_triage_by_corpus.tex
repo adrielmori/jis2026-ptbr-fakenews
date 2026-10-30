@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\caption{Coverage at macro-F1 $\ge 0.90$ per corpus (sigmoid calibration), in-distribution and LODO. ``--'': the target is not reached at any threshold $\le 0.99$. BT-L = BERTimbau-large; Alb-900M = Albertina-900M.}
+\label{tab:triage-by-corpus}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Corpus & in-dist. Alb-900M + SVC-RBF & in-dist. Alb-900M + LogReg & in-dist. BT-L + SVC-RBF & in-dist. BT-L + LogReg & LODO Alb-900M + SVC-RBF & LODO Alb-900M + LogReg & LODO BT-L + SVC-RBF & LODO BT-L + LogReg \\
+\midrule
+CENTRALFATOS & -- & 0.55 & -- & -- & -- & 0.00 & -- & -- \\
+COVID19BR & 0.28 & 0.25 & 0.38 & -- & -- & -- & -- & -- \\
+FACTCKBR & 0.47 & -- & 0.56 & -- & -- & -- & -- & -- \\
+FAKEBR & 1.00 & 0.92 & 1.00 & 0.95 & -- & -- & -- & -- \\
+FAKETRUEBR & 1.00 & 0.99 & 1.00 & 0.89 & -- & -- & -- & -- \\
+FCN & 1.00 & 1.00 & 1.00 & 1.00 & 0.93 & 0.66 & 0.63 & -- \\
+FNEWSSET & -- & -- & -- & -- & -- & -- & -- & -- \\
+FRECOGNA & 1.00 & 0.91 & 1.00 & 0.79 & -- & -- & -- & -- \\
+MUMINPT & -- & -- & -- & -- & -- & -- & -- & -- \\
+TRE300 & 0.80 & -- & 1.00 & 1.00 & 0.10 & -- & 0.15 & -- \\
+ALL & 1.00 & 0.94 & 1.00 & 0.89 & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table*}

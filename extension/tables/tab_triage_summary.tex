@@ -1,0 +1,36 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Selective classification (all corpora pooled): minimum confidence threshold $\tau$ at which the macro-F1 of the automatically classified items reaches 0.90 and 0.95, with the corresponding coverage (fraction of items not routed to human review) and its bootstrap 95\% confidence interval (1\,000 resamples). A threshold is only accepted when it covers at least 30 items; ``not reached'' means no threshold $\le 0.99$ satisfies the target.}
+\label{tab:triage-summary}
+\begin{tabular}{lllrlrl}
+\toprule
+Scenario & Pipeline & Cond. & $\tau_{0.90}$ & Coverage [95\% CI] & $\tau_{0.95}$ & Coverage [95\% CI] \\
+\midrule
+in-dist. & Albertina-900M + SVC-RBF & raw & 0.50 & 1.000 [1.000, 1.000] & 0.55 & 0.936 [0.918, 0.962] \\
+in-dist. & Albertina-900M + SVC-RBF & sigmoid & 0.50 & 1.000 [1.000, 1.000] & 0.65 & 0.945 [0.921, 0.962] \\
+in-dist. & Albertina-900M + SVC-RBF & isotonic & 0.50 & 1.000 [1.000, 1.000] & 0.65 & 0.948 [0.917, 0.953] \\
+in-dist. & Albertina-900M + LogReg & raw & 0.59 & 0.942 [0.908, 0.966] & 0.83 & 0.718 [0.633, 0.760] \\
+in-dist. & Albertina-900M + LogReg & sigmoid & 0.60 & 0.940 [0.906, 0.965] & 0.85 & 0.713 [0.637, 0.765] \\
+in-dist. & Albertina-900M + LogReg & isotonic & 0.61 & 0.943 [0.855, 0.960] & 0.88 & 0.664 [0.653, 0.751] \\
+in-dist. & BERTimbau-large + SVC-RBF & raw & 0.50 & 1.000 [1.000, 1.000] & 0.54 & 0.951 [0.924, 0.961] \\
+in-dist. & BERTimbau-large + SVC-RBF & sigmoid & 0.50 & 1.000 [1.000, 1.000] & 0.67 & 0.943 [0.932, 0.962] \\
+in-dist. & BERTimbau-large + SVC-RBF & isotonic & 0.50 & 1.000 [1.000, 1.000] & 0.66 & 0.947 [0.928, 0.956] \\
+in-dist. & BERTimbau-large + LogReg & raw & 0.65 & 0.877 [0.846, 0.918] & 0.87 & 0.626 [0.580, 0.683] \\
+in-dist. & BERTimbau-large + LogReg & sigmoid & 0.65 & 0.887 [0.852, 0.921] & 0.88 & 0.636 [0.573, 0.685] \\
+in-dist. & BERTimbau-large + LogReg & isotonic & 0.68 & 0.853 [0.825, 0.905] & 0.90 & 0.598 [0.583, 0.683] \\
+LODO & Albertina-900M + SVC-RBF & raw & -- & not reached & -- & not reached \\
+LODO & Albertina-900M + SVC-RBF & sigmoid & -- & not reached & -- & not reached \\
+LODO & Albertina-900M + SVC-RBF & isotonic & -- & not reached & -- & not reached \\
+LODO & Albertina-900M + LogReg & raw & -- & not reached & -- & not reached \\
+LODO & Albertina-900M + LogReg & sigmoid & -- & not reached & -- & not reached \\
+LODO & Albertina-900M + LogReg & isotonic & -- & not reached & -- & not reached \\
+LODO & BERTimbau-large + SVC-RBF & raw & -- & not reached & -- & not reached \\
+LODO & BERTimbau-large + SVC-RBF & sigmoid & -- & not reached & -- & not reached \\
+LODO & BERTimbau-large + SVC-RBF & isotonic & -- & not reached & -- & not reached \\
+LODO & BERTimbau-large + LogReg & raw & -- & not reached & -- & not reached \\
+LODO & BERTimbau-large + LogReg & sigmoid & -- & not reached & -- & not reached \\
+LODO & BERTimbau-large + LogReg & isotonic & -- & not reached & -- & not reached \\
+\bottomrule
+\end{tabular}
+\end{table*}

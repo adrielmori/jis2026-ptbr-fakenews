@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Corpora used in the leave-one-dataset-out (LODO) study. $n$ is the number of embedded instances (train+val+test of the published splits), all of which form the test set when the corpus is held out. LODO $n_{\text{train}}$ is the size of the union of the other nine corpora; balanced $n_{\text{train}}$ is the size after sub-sampling every training corpus to the smallest one (stratified by class).}
+\label{tab:corpora-lodo}
+\begin{tabular}{lrrrrrr}
+\toprule
+Corpus & $n$ & FAKE & REAL & \% REAL & LODO $n_{\text{train}}$ & Balanced $n_{\text{train}}$ \\
+\midrule
+CENTRALFATOS & 10\,316 & 10\,282 & 34 & 0.3 & 31\,557 & 2\,700 \\
+COVID19BR & 2\,399 & 905 & 1\,494 & 62.3 & 39\,474 & 2\,700 \\
+FACTCKBR & 2\,106 & 1\,866 & 240 & 11.4 & 39\,767 & 2\,700 \\
+FAKEBR & 7\,200 & 3\,600 & 3\,600 & 50.0 & 34\,673 & 2\,700 \\
+FAKETRUEBR & 3\,582 & 1\,791 & 1\,791 & 50.0 & 38\,291 & 2\,700 \\
+FCN & 2\,064 & 1\,044 & 1\,020 & 49.4 & 39\,809 & 2\,700 \\
+FNEWSSET & 600 & 300 & 300 & 50.0 & 41\,273 & 2\,700 \\
+FRECOGNA & 11\,902 & 5\,951 & 5\,951 & 50.0 & 29\,971 & 2\,700 \\
+MUMINPT & 1\,404 & 1\,339 & 65 & 4.6 & 40\,469 & 2\,700 \\
+TRE300 & 300 & 148 & 152 & 50.7 & 41\,573 & 5\,400 \\
+\bottomrule
+\end{tabular}
+\end{table}

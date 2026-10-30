@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Robustness per held-out corpus under LODO (layout of Table~5 of the original paper): mean and best macro-F1 over the 32 pipelines, range (best $-$ worst) and the best pipeline. ``In-dist.\ mean'' is the published mean in-distribution macro-F1 of the same 32 pipelines on the test split of that corpus.}
+\label{tab:lodo-by-dataset}
+\begin{tabular}{lrrrrrl}
+\toprule
+Held-out corpus & $n_{\text{test}}$ & In-dist. mean & LODO mean & LODO best & Range & Best LODO pipeline \\
+\midrule
+FCN & 2\,064 & 0.853 & 0.725 & 0.894 & 0.560 & Albertina-900M + GradBoost \\
+TRE300 & 300 & 0.683 & 0.544 & 0.704 & 0.533 & Albertina-100M + kNN \\
+FACTCKBR & 2\,106 & 0.718 & 0.544 & 0.674 & 0.291 & Albertina-900M + LogReg \\
+FAKEBR & 7\,200 & 0.746 & 0.523 & 0.593 & 0.258 & Albertina-100M + SVC-RBF \\
+CENTRALFATOS & 10\,316 & 0.508 & 0.451 & 0.502 & 0.107 & BERTimbau-base + GaussianNB \\
+COVID19BR & 2\,399 & 0.636 & 0.404 & 0.506 & 0.175 & BERTimbau-large + GaussianNB \\
+FRECOGNA & 11\,902 & 0.794 & 0.370 & 0.455 & 0.160 & BERTimbau-base + DecisionTree \\
+MUMINPT & 1\,404 & 0.518 & 0.354 & 0.553 & 0.397 & Albertina-900M + kNN \\
+FAKETRUEBR & 3\,582 & 0.782 & 0.314 & 0.426 & 0.242 & Albertina-100M + LogReg \\
+FNEWSSET & 600 & 0.486 & 0.253 & 0.511 & 0.432 & BERTimbau-base + GaussianNB \\
+\bottomrule
+\end{tabular}
+\end{table*}

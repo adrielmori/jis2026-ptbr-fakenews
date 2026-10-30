@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\small
+\caption{High-confidence (HC, confidence $\ge 0.90$) errors of the best LODO pipeline (Albertina-100M + kNN) per held-out corpus and per true class. ``Cov.'' is the fraction of items predicted with confidence $\ge 0.90$; ``Err.\ rate'' is the error rate among those items; ``Errors that are HC'' is the fraction of all errors made with confidence $\ge 0.90$.}
+\label{tab:high-conf-errors}
+\begin{tabular}{lrrrrr}
+\toprule
+Corpus / class & $n$ & Error rate & Cov.\ $\ge 0.90$ & Err.\ rate $\ge 0.90$ & Errors that are HC \\
+\midrule
+MUMINPT & 1\,404 & 0.114 & 0.403 & 0.055 & 0.194 \\
+FACTCKBR & 2\,106 & 0.125 & 0.539 & 0.037 & 0.159 \\
+FCN & 2\,064 & 0.152 & 0.495 & 0.044 & 0.143 \\
+CENTRALFATOS & 10\,316 & 0.249 & 0.244 & 0.062 & 0.061 \\
+TRE300 & 300 & 0.290 & 0.230 & 0.275 & 0.218 \\
+FAKEBR & 7\,200 & 0.388 & 0.329 & 0.320 & 0.272 \\
+FRECOGNA & 11\,902 & 0.519 & 0.661 & 0.529 & 0.674 \\
+FAKETRUEBR & 3\,582 & 0.551 & 0.433 & 0.700 & 0.551 \\
+COVID19BR & 2\,399 & 0.565 & 0.338 & 0.612 & 0.366 \\
+FNEWSSET & 600 & 0.738 & 0.297 & 0.888 & 0.357 \\
+\textit{class FAKE} & 27\,226 & 0.154 & 0.405 & 0.029 & 0.075 \\
+\textit{class REAL} & 14\,647 & 0.815 & 0.483 & 0.939 & 0.556 \\
+\midrule All & 41\,873 & 0.385 & 0.432 & 0.385 & 0.431 \\
+\bottomrule
+\end{tabular}
+\end{table}

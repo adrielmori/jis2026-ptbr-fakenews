@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Full versus balanced LODO (every training corpus sub-sampled to the smallest one, five seeds). Means are over the 32 pipelines; $\pm$ is the average standard deviation across seeds; $\Delta$ = balanced $-$ full. A small $|\Delta|$ indicates that the LODO degradation is driven by domain shift rather than by training volume.}
+\label{tab:lodo-balanced}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Held-out corpus & $n_{\text{tr}}$ full & $n_{\text{tr}}$ bal. & Mean full & Mean balanced & $\Delta$ & Best full & Best bal. & $\Delta$ \\
+\midrule
+FCN & 39\,809 & 2\,700 & 0.725 & 0.770 $\pm$ 0.033 & +0.045 & 0.894 & 0.891 & -0.003 \\
+TRE300 & 41\,573 & 5\,400 & 0.544 & 0.505 $\pm$ 0.023 & -0.040 & 0.704 & 0.703 & -0.001 \\
+FACTCKBR & 39\,767 & 2\,700 & 0.544 & 0.585 $\pm$ 0.021 & +0.041 & 0.674 & 0.663 & -0.011 \\
+FAKEBR & 34\,673 & 2\,700 & 0.523 & 0.602 $\pm$ 0.019 & +0.079 & 0.593 & 0.671 & +0.078 \\
+CENTRALFATOS & 31\,557 & 2\,700 & 0.451 & 0.396 $\pm$ 0.012 & -0.055 & 0.502 & 0.481 & -0.021 \\
+COVID19BR & 39\,474 & 2\,700 & 0.404 & 0.403 $\pm$ 0.013 & -0.002 & 0.506 & 0.465 & -0.040 \\
+FRECOGNA & 29\,971 & 2\,700 & 0.370 & 0.360 $\pm$ 0.023 & -0.010 & 0.455 & 0.469 & +0.014 \\
+MUMINPT & 40\,469 & 2\,700 & 0.354 & 0.366 $\pm$ 0.015 & +0.012 & 0.553 & 0.509 & -0.045 \\
+FAKETRUEBR & 38\,291 & 2\,700 & 0.314 & 0.388 $\pm$ 0.024 & +0.074 & 0.426 & 0.490 & +0.064 \\
+FNEWSSET & 41\,273 & 2\,700 & 0.253 & 0.229 $\pm$ 0.024 & -0.024 & 0.511 & 0.400 & -0.112 \\
+\bottomrule
+\end{tabular}
+\end{table*}

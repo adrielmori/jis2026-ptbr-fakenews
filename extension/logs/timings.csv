@@ -1,0 +1,36 @@
+script,step,seconds,finished_at
+check_integrity,embeddings and metadata,0.33,2026-10-29 22:31:49
+check_integrity,corpus counts vs unified dataset and splits,0.55,2026-10-29 22:31:50
+check_integrity,hyper-parameters and published predictions,0.16,2026-10-29 22:31:50
+reproduce_table4,"refit 32 pipelines on train+val (n_jobs=10, gpu=True)",5840.00,2026-10-30 00:09:15
+reproduce_table4,compare with published Table 4,1.79,2026-10-30 00:09:17
+run_lodo,"full LODO: 320 fits (n_jobs=10, gpu=True)",39976.26,2026-10-30 11:15:42
+run_lodo,full LODO tables,0.13,2026-10-30 11:15:45
+run_lodo,balanced LODO: 200 tasks x 8 classifiers (n_jobs=10),6969.81,2026-10-30 13:11:55
+run_lodo,balanced LODO summary,0.05,2026-10-30 13:12:07
+run_lodo,Friedman / Wilcoxon / Holm,0.10,2026-10-30 13:12:07
+run_calibration,scenario (a) in-distribution: 4 fits (gpu=True),54.76,2026-10-30 13:13:10
+run_calibration,"scenario (b) LODO: 40 fits (n_jobs=10, gpu=True)",601.72,2026-10-30 13:23:12
+run_calibration,calibration metrics + reliability bins,1.92,2026-10-30 13:23:14
+run_calibration,"selective classification curves, AURC and triage thresholds (bootstrap)",113.73,2026-10-30 13:25:08
+run_errors,select best LODO pipeline and probability source,1.27,2026-10-30 13:25:14
+run_errors,high-confidence errors,1.32,2026-10-30 13:25:15
+run_errors,UMAP of albertina_ptbr_100m embedding space,61.19,2026-10-30 13:26:16
+make_tables,Study 1 tables,0.13,2026-10-30 13:26:19
+make_tables,Study 2 tables,0.11,2026-10-30 13:26:19
+make_tables,error-analysis and sanity tables,0.05,2026-10-30 13:26:19
+make_figures,Study 1 figures,2.30,2026-10-30 13:26:24
+make_figures,Study 2 figures,13.14,2026-10-30 13:26:38
+make_figures,error-analysis figures,1.94,2026-10-30 13:26:40
+make_baseline_figures,load published results,1.18,2026-10-30 15:18:32
+make_baseline_figures,corpus and split figures,2.43,2026-10-30 15:18:35
+make_baseline_figures,classical in-distribution figures,3.74,2026-10-30 15:18:38
+make_baseline_figures,model-zoo figures (classical + zero-shot),7.24,2026-10-30 15:18:46
+make_baseline_figures,hard examples and UMAP of the published embeddings,214.50,2026-10-30 15:22:20
+make_baseline_figures,baseline tables,0.03,2026-10-30 15:22:20
+make_baseline_figures,load published results,1.37,2026-10-30 15:25:45
+make_baseline_figures,corpus and split figures,2.44,2026-10-30 15:25:48
+make_baseline_figures,classical in-distribution figures,3.96,2026-10-30 15:25:51
+make_baseline_figures,model-zoo figures (classical + zero-shot),7.49,2026-10-30 15:25:59
+make_baseline_figures,hard examples and UMAP of the published embeddings,203.46,2026-10-30 15:29:22
+make_baseline_figures,baseline tables,0.02,2026-10-30 15:29:22

@@ -1,0 +1,21 @@
+2026-10-30 13:26:19,202 | INFO | [START] Study 1 tables
+2026-10-30 13:26:19,305 | INFO | wrote tab_corpora_lodo_sizes.tex
+2026-10-30 13:26:19,319 | INFO | wrote tab_lodo_by_pipeline.tex
+2026-10-30 13:26:19,322 | INFO | wrote tab_lodo_by_dataset.tex
+2026-10-30 13:26:19,323 | INFO | wrote tab_lodo_vs_indist_encoders.tex
+2026-10-30 13:26:19,325 | INFO | wrote tab_lodo_vs_indist_pipelines.tex
+2026-10-30 13:26:19,329 | INFO | wrote tab_lodo_balanced.tex
+2026-10-30 13:26:19,331 | INFO | wrote tab_lodo_stats.tex
+2026-10-30 13:26:19,332 | INFO | wrote tab_lodo_posthoc_top.tex
+2026-10-30 13:26:19,332 | INFO | [DONE ] Study 1 tables | 0.1 s (0.00 min)
+2026-10-30 13:26:19,333 | INFO | [START] Study 2 tables
+2026-10-30 13:26:19,373 | INFO | wrote tab_calibration_metrics.tex
+2026-10-30 13:26:19,396 | INFO | wrote tab_triage_summary.tex
+2026-10-30 13:26:19,435 | INFO | wrote tab_triage_by_corpus.tex
+2026-10-30 13:26:19,445 | INFO | wrote tab_selective_aurc.tex
+2026-10-30 13:26:19,445 | INFO | [DONE ] Study 2 tables | 0.1 s (0.00 min)
+2026-10-30 13:26:19,446 | INFO | [START] error-analysis and sanity tables
+2026-10-30 13:26:19,472 | INFO | wrote tab_high_conf_errors.tex
+2026-10-30 13:26:19,495 | INFO | wrote tab_table4_reproduction.tex
+2026-10-30 13:26:19,495 | INFO | [DONE ] error-analysis and sanity tables | 0.0 s (0.00 min)
+2026-10-30 13:26:19,496 | INFO | Tables written to <repo>\extension\tables

@@ -1,0 +1,55 @@
+2026-10-30 15:25:44,211 | INFO | [START] load published results
+2026-10-30 15:25:45,583 | INFO | 42 models in the published test report (10 zero-shot)
+2026-10-30 15:25:45,583 | INFO | [DONE ] load published results | 1.4 s (0.02 min)
+2026-10-30 15:25:45,584 | INFO | [START] corpus and split figures
+2026-10-30 15:25:47,657 | INFO | saved fig_b01_corpus_overview.{pdf,png}
+2026-10-30 15:25:48,022 | INFO | saved fig_b02_split_composition.{pdf,png}
+2026-10-30 15:25:48,025 | INFO | [DONE ] corpus and split figures | 2.4 s (0.04 min)
+2026-10-30 15:25:48,026 | INFO | [START] classical in-distribution figures
+2026-10-30 15:25:48,580 | INFO | saved fig_b03_table4_heatmaps.{pdf,png}
+2026-10-30 15:25:49,826 | INFO | saved fig_b04_per_corpus_heatmap.{pdf,png}
+2026-10-30 15:25:50,568 | INFO | saved fig_b11_friedman_ranks_test.{pdf,png}
+2026-10-30 15:25:51,289 | INFO | saved fig_b11_friedman_ranks_val.{pdf,png}
+2026-10-30 15:25:51,553 | INFO | saved fig_b12_embedding_vs_classifier_spread.{pdf,png}
+2026-10-30 15:25:51,986 | INFO | saved fig_b13_encoder_rank_within_classifier.{pdf,png}
+2026-10-30 15:25:51,986 | INFO | [DONE ] classical in-distribution figures | 4.0 s (0.07 min)
+2026-10-30 15:25:51,987 | INFO | [START] model-zoo figures (classical + zero-shot)
+2026-10-30 15:25:52,804 | INFO | saved fig_b05_model_ranking_ci.{pdf,png}
+2026-10-30 15:25:53,780 | INFO | saved fig_b06_class_f1_mcc.{pdf,png}
+2026-10-30 15:25:54,226 | INFO | saved fig_b07_sample_difficulty.{pdf,png}
+2026-10-30 15:25:56,232 | INFO | saved fig_b08_zoo_per_corpus_heatmap.{pdf,png}
+2026-10-30 15:25:57,330 | INFO | saved fig_b09_mcnemar_matrix.{pdf,png}
+2026-10-30 15:25:58,373 | INFO | saved fig_b10_correctness_correlation.{pdf,png}
+2026-10-30 15:25:58,958 | INFO | saved fig_b14_confusion_matrices.{pdf,png}
+2026-10-30 15:25:59,472 | INFO | saved fig_b15_zero_shot_profile.{pdf,png}
+2026-10-30 15:25:59,474 | INFO | [DONE ] model-zoo figures (classical + zero-shot) | 7.5 s (0.12 min)
+2026-10-30 15:25:59,475 | INFO | [START] hard examples and UMAP of the published embeddings
+2026-10-30 15:26:31,107 | INFO | UMAP bertimbau_base: 6281 test items
+2026-10-30 15:26:39,913 | INFO | UMAP bertimbau_large: 6281 test items
+2026-10-30 15:26:48,704 | INFO | UMAP albertina_ptbr_100m: 6281 test items
+2026-10-30 15:26:57,844 | INFO | UMAP albertina_ptbr_900m: 6281 test items
+2026-10-30 15:26:58,682 | INFO | saved fig_b16_umap_test_encoders.{pdf,png}
+2026-10-30 15:27:18,034 | INFO | UMAP bertimbau_base/train: 29311 items
+2026-10-30 15:27:26,337 | INFO | UMAP bertimbau_base/val: 6281 items
+2026-10-30 15:27:34,637 | INFO | UMAP bertimbau_base/test: 6281 items
+2026-10-30 15:27:54,089 | INFO | UMAP bertimbau_large/train: 29311 items
+2026-10-30 15:28:02,741 | INFO | UMAP bertimbau_large/val: 6281 items
+2026-10-30 15:28:11,247 | INFO | UMAP bertimbau_large/test: 6281 items
+2026-10-30 15:28:28,816 | INFO | UMAP albertina_ptbr_100m/train: 29311 items
+2026-10-30 15:28:36,831 | INFO | UMAP albertina_ptbr_100m/val: 6281 items
+2026-10-30 15:28:45,132 | INFO | UMAP albertina_ptbr_100m/test: 6281 items
+2026-10-30 15:29:03,598 | INFO | UMAP albertina_ptbr_900m/train: 29311 items
+2026-10-30 15:29:12,096 | INFO | UMAP albertina_ptbr_900m/val: 6281 items
+2026-10-30 15:29:20,985 | INFO | UMAP albertina_ptbr_900m/test: 6281 items
+2026-10-30 15:29:22,927 | INFO | saved fig_b17_umap_splits_by_corpus.{pdf,png}
+2026-10-30 15:29:22,938 | INFO | [DONE ] hard examples and UMAP of the published embeddings | 203.5 s (3.39 min)
+2026-10-30 15:29:22,940 | INFO | [START] baseline tables
+2026-10-30 15:29:22,941 | INFO | wrote tab_b01_corpus_statistics.tex
+2026-10-30 15:29:22,942 | INFO | wrote tab_b02_table4_test_val.tex
+2026-10-30 15:29:22,946 | INFO | wrote tab_b03_model_zoo_test.tex
+2026-10-30 15:29:22,954 | INFO | wrote tab_b04_friedman_holm_test.tex
+2026-10-30 15:29:22,955 | INFO | wrote tab_b05_zero_shot_profile.tex
+2026-10-30 15:29:22,956 | INFO | wrote tab_b06_hard_examples.tex
+2026-10-30 15:29:22,962 | INFO | wrote tab_b07_mcnemar_summary.tex
+2026-10-30 15:29:22,963 | INFO | [DONE ] baseline tables | 0.0 s (0.00 min)
+2026-10-30 15:29:22,964 | INFO | Baseline figures written to <repo>\extension\figures\baseline, tables to <repo>\extension\tables\baseline

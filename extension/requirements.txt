@@ -1,0 +1,18 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
+# Pinned environment used to produce every artefact under extension/.
+# numpy is kept at the version found in the original repository environment (1.26.4).
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+scikit-learn==1.5.2
+matplotlib==3.11.2
+seaborn==0.13.2
+umap-learn==0.5.7
+numba==0.68.1
+pyarrow==19.0.1
+pyyaml==6.0.3
+joblib==1.5.3
+tqdm==4.66.5
+psutil
+tabulate
+torch==2.11.0   # GPU Gram matrix for SVC-RBF (optional: scripts fall back to CPU libsvm when CUDA is absent)

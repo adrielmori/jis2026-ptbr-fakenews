@@ -1,0 +1,74 @@
+# All paths are relative to the repository root (the parent of extension/).
+paths:
+  embeddings_dir: codes/results/embeddings
+  splits_dir: codes/results/splits
+  unified_dataset: codes/datasets/Unified_PTBR_FakeNews.parquet
+  published_results: codes/results/classical_models/classical_models_results.csv
+  published_test_predictions: codes/results/classical_models/classical_models_test_predictions.csv
+  published_val_predictions: codes/results/classical_models/classical_models_val_predictions.csv
+  published_stats_dir: codes/results/classical_models/statistical_tests
+  published_table4: codes/results/classical_models/statistical_tests/test_classifier_embedding_mean_macro_f1.csv
+  published_table5_source: codes/results/classical_models/statistical_tests/test_macro_f1_by_dataset_model.csv
+  published_ranking: codes/results/classical_models/statistical_tests/test_model_average_ranking.csv
+  out_results: extension/results
+  out_figures: extension/figures
+  out_tables: extension/tables
+  out_logs: extension/logs
+
+encoders: [bertimbau_base, bertimbau_large, albertina_ptbr_100m, albertina_ptbr_900m]
+classifiers: [logreg, linearsvc, svc_rbf, random_forest, gradient_boosting, gaussian_nb, knn, decision_tree]
+scaled_classifiers: [logreg, linearsvc, svc_rbf, gaussian_nb, knn]
+datasets: [CENTRALFATOS, COVID19BR, FACTCKBR, FAKEBR, FAKETRUEBR, FCN, FNEWSSET, FRECOGNA, MUMINPT, TRE300]
+# Corpus present in the unified dataset but never embedded / never used in the published per-dataset analysis.
+datasets_not_embedded: [BOATOSBR]
+
+labels:
+  0: FAKE
+  1: REAL
+
+random_state: 42
+n_jobs: 10           # outer parallelism over LODO folds / pipelines (CPU only)
+rf_n_jobs: 2         # n_jobs inside RandomForest when running under outer parallelism (does not affect results)
+gpu:
+  svc_rbf: auto      # auto | true | false - compute the SVC-RBF Gram matrix on the GPU (torch, float64) and hand it
+                     # to libsvm as a precomputed kernel: identical solution (|decision diff| ~1e-12), ~100x faster
+
+lodo:
+  balanced_seeds: [42, 43, 44, 45, 46]
+  min_per_class: 1   # stratified subsample keeps at least one item of each class present in a corpus
+
+calibration:
+  pipelines:
+    - [albertina_ptbr_900m, svc_rbf]
+    - [albertina_ptbr_900m, logreg]
+    - [bertimbau_large, svc_rbf]
+    - [bertimbau_large, logreg]
+  conditions: [raw, sigmoid, isotonic]
+  lodo_calibration_fraction: 0.15
+  n_bins: 15
+  thresholds: {start: 0.50, stop: 0.99, step: 0.01}
+  f1_targets: [0.90, 0.95]
+  bootstrap_resamples: 1000
+  min_covered: 30      # a threshold counts as "reaching" a macro-F1 target only if >= 30 items are covered
+  bootstrap_ci: 0.95
+
+errors:
+  top_k_per_corpus: 30
+  high_confidence_threshold: 0.90
+  text_chars: 300
+  umap:
+    pca_components: 50
+    n_neighbors: 40
+    min_dist: 0.10
+    metric: cosine
+    spread: 1.0
+
+stats:
+  alpha: 0.05
+
+sanity:
+  table4_tolerance: 0.005
+
+figures:
+  dpi: 300
+  font_size: 8

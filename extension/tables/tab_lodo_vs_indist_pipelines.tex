@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\small
+\caption{The twelve best in-distribution pipelines and their LODO macro-F1 and rank (out of 32).}
+\label{tab:lodo-vs-indist-pipelines}
+\begin{tabular}{lrrrrr}
+\toprule
+Pipeline & In-dist. F1 & Rank & LODO F1 & Rank & $\Delta$ \\
+\midrule
+BERTimbau-large + SVC-RBF & 0.824 & 1 & 0.449 & 22 & -0.375 \\
+Albertina-900M + SVC-RBF & 0.822 & 2 & 0.444 & 24 & -0.378 \\
+BERTimbau-base + SVC-RBF & 0.806 & 3 & 0.433 & 27 & -0.374 \\
+Albertina-100M + SVC-RBF & 0.791 & 4 & 0.459 & 17 & -0.332 \\
+Albertina-900M + LinearSVC & 0.748 & 5 & 0.456 & 19 & -0.291 \\
+BERTimbau-large + kNN & 0.744 & 6 & 0.489 & 3 & -0.255 \\
+Albertina-900M + kNN & 0.739 & 7 & 0.489 & 2 & -0.250 \\
+Albertina-900M + LogReg & 0.738 & 8 & 0.454 & 20 & -0.284 \\
+BERTimbau-base + kNN & 0.735 & 9 & 0.465 & 11 & -0.270 \\
+BERTimbau-large + LinearSVC & 0.734 & 10 & 0.469 & 5 & -0.264 \\
+BERTimbau-large + LogReg & 0.731 & 11 & 0.462 & 13 & -0.269 \\
+BERTimbau-large + RandomForest & 0.716 & 12 & 0.453 & 21 & -0.263 \\
+\bottomrule
+\end{tabular}
+\end{table}
